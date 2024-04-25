@@ -15,4 +15,6 @@ enum TerminalCommand: String {
     case layoutStack = "yabai -m space --layout stack"
     case sketchybarEnable = "brew services start sketchybar"
     case sketchybarDisable = "brew services stop sketchybar"
+    case restartYabai = "yabai --restart-service"
+    case restartSKHD = "skhd --restart-service"
 }
