@@ -46,6 +46,15 @@ struct MenuBarView: View {
           DescButton(btnTitle: "Disable", btnImage: "lightswitch.off", btnCommand: "brew services stop sketchybar")
         }
       }
+      Divider()
+      VStack (alignment: .leading){
+        Label("Restart", systemImage: "lightswitch.on")
+          .labelStyle(.titleOnly)
+        HStack (spacing: 2) {
+          DescButton(btnTitle: "yabai", btnImage: "repeat.circle.fill", btnCommand: TerminalCommand.restartYabai.rawValue)
+          DescButton(btnTitle: "skhd", btnImage: "repeat.circle.fill", btnCommand: TerminalCommand.restartSKHD.rawValue)
+        }
+      }
       
       Divider()
       QuitButtonView()
