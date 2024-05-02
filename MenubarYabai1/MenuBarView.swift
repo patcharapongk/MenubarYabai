@@ -41,9 +41,14 @@ struct MenuBarView: View {
       VStack (alignment: .leading){
         Label("Sketchybar", systemImage: "lightswitch.on")
           .labelStyle(.titleOnly)
+  
         HStack (spacing: 2) {
           DescButton(btnTitle: "Enable", btnImage: "lightswitch.on", btnCommand: "brew services start sketchybar")
           DescButton(btnTitle: "Disable", btnImage: "lightswitch.off", btnCommand: "brew services stop sketchybar")
+        }
+        HStack {
+          DescButton(btnTitle: "Toggle Menubar", btnImage: "menubar.arrow.up.rectangle", btnCommand: "osascript ~/.hidemenubar.scpt")
+            .frame(width: .infinity)
         }
       }
       Divider()
